@@ -1,7 +1,7 @@
 
 [Whitelist]
 # Required for whitelist authentication.
-whitelist_user = 
+whitelist_user = 475384412
 whitelist_pass = 
 
 
@@ -44,7 +44,7 @@ minimum_item_age = 5184000
 
 # The bot will only ask for items with an average daily sale volume above this value.
 # Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
-minimum_ask_volume = 1
+minimum_ask_volume = 2
 
 # The bot will only offer items with a daily sale volume above this value.
 # Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
@@ -54,7 +54,7 @@ minimum_offer_volume = 0.5
 values_update_cooldown = 3600
 
 # Tells bot how frequently to scan MRGA and Rolimon's websites for value changes. Setting it to less than a minute is not recommended.
-values_scan_cooldown = 300
+values_scan_cooldown = 100
 
 # Tells bot what it should do with projected items (till their projected marker dissapears)
 # off = bot will trade all projecteds just like normal items, ask and offer
@@ -73,7 +73,7 @@ lpp_detection_mode = off
 
 ###################### INBOUND TRADES ######################
 # Specifies at what intervals bot should scan inbound trades, in seconds.
-inbound_scan_cooldown = 3600
+inbound_scan_cooldown = 500
 
 # Tells bot in what mode it should run inbound trades scan.
 # off = inbound scanner is turned off
@@ -84,7 +84,7 @@ inbound_scan_mode = strict
 
 ###################### OUTBOUND TRADES ######################
 # Specifies at what intervals bot should scan outbound trades, in seconds.
-outbound_scan_cooldown = 3600
+outbound_scan_cooldown = 250
 
 # Tells bot in what mode it should run outbound trades scan.
 # off = outbound scanner is turned off
@@ -101,11 +101,11 @@ trade_friends = false
 # This setting is heavily dependent on amount of proxy-servers that you have in proxy.txt file. 100 should be enough in most cases.
 # If you have no proxy, DO NOT set cooldown under 600. If you have 100+ proxies, 20 seconds cooldown should be fine.
 # Setting it too low will cause Roblox to temporarily (about 18 hours) disable trades on your account.
-trade_cooldown = 20
+trade_cooldown = 15
 
 # Maximum time you are willing to wait for program to calculate potential trades per partner.
 # 99% of partners require less than 5 seconds to compute, and 99.9% of partners require less than 10 sec to compute.
-max_trade_search_timer = 10
+max_trade_search_timer = 6
 
 # Controls how many items bot is allowed to offer/request in each trade. You can't offer or request over 4 items.
 minimum_offer = 1
@@ -126,11 +126,11 @@ maximum_trade_attractiveness = 0.15
 
 # Shows the percentage of value you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
 minimum_value_gain = 0.02
-maximum_value_gain = none
+maximum_value_gain = 0.05
 
 # Shows the percentage of rap you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
-minimum_rap_gain = none
-maximum_rap_gain = none
+minimum_rap_gain = 0.02
+maximum_rap_gain = 0.04
 
 # Determines which trades in the queue are sent first
 # 1 = highest trade attractiveness
