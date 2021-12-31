@@ -1,0 +1,89 @@
+```
+[authentication]
+
+roblox_cookie = _|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|
+user_id = 475384412
+
+[trading]
+
+priority = none
+
+maximum_item_value = 10000
+maximum_item_rap = 10000
+
+maximum_rap_increase = 250
+maximum_value_increase = 400
+
+minimum_rap_increase = 95
+minimum_value_increase = 120
+
+trade_priority = 2
+
+items_to_keep = 4390891467,4255053867
+items_you_dont_want = 0
+people_not_to_send_to = 0
+
+item_timeout = 1
+player_timeout = 3
+minimum_daily_sales = 3
+
+low_demand_to_high_demand = true
+rap_to_value = true
+value_to_rap = true
+rares_to_demand = true
+flip_projecteds = true
+bigs_to_lots_of_smalls = true
+single_items_to_multiple = true
+prioritize_upgrading = false
+prioritize_downgrading = true
+
+; Items you really want!
+items_you_really_want = 1,1,1
+
+[robux]
+
+robux_trades_receive_enabled = false
+robux_trades_send_enabled = false
+
+[specific_trading]
+
+; This section allows you to specify what items you wish to send and receive
+
+specific_trades_enabled = false
+items_to_give = 0
+items_to_receive = 0
+
+[inbound]
+
+check_inbound_trades = true
+decline_projecteds = true
+accept_inbound_trades = false
+decline_none_demand_trades = true
+
+check_inbound_timeout = 3
+
+[outbound]
+
+check_outbounds = true
+check_outbound_trades_cooldown = 40
+decline_trades_with_projecteds = true
+decline_equal_trades = true
+
+decline_trades_which_send_certain_items = false
+certain_items = 0,0,0
+
+[rolimons]
+
+check_rolimons_ads = true
+rolimons_ads_timeout = 3
+
+[safety]
+
+compare_item_prices = true
+must_have_higher_rap = true
+must_have_higher_value = true
+
+[debug]
+
+dont_send_trades = false
+print_successful_trades = true```
