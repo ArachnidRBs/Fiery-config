@@ -1,0 +1,73 @@
+{
+    "authentication": {
+        "robloxSecurityCookie": "",
+        "userId": 475384412,
+        "SecretKey":""
+    },
+    "discord":{
+        "webhook": ""
+    },
+    "trading": {
+        "toUse":"fixed",
+        "maxTradeRap": 99999999,
+        "maxTradeValue": 99999999,
+        "maxItemValue": 99999999,
+        "maxItemRap": 99999999,
+        "fixed": {
+            "maxValueGain": 600,
+            "minValueGain": 200,
+            "maxRapGain": 400,
+            "minRapGain": 95
+        },
+        "percentages":{
+            "maxValueGain": 1.05,
+            "minValueGain": 1.03,
+            "maxRapGain": 1.04,
+            "minRapGain": 1.02
+        },
+        "itemsNotToSend": [],
+        "itemsYouDontWant": [],
+        "peopleToAvoid": [],
+        "robux": {
+            "enabled": false,
+            "valuePerRobux": 0.21070012,
+            "maxRobuxToGive": 5,
+            "minRobuxToGive": 0,
+            "maxRobuxToReceive": 200,
+            "minRobuxToReceive": 50
+        },
+        "safety": {
+            "compareRobuxPrices": true,
+            "mustHaveHigherRap": true,
+            "mustHaveHigherValue": true
+        }
+    },
+    "bounds": {
+        "outbound": {
+            "checkOutboundTrades": true,
+            "checkOutBoundTradesCooldown": 120,
+            "declineEqualTrade": true,
+            "ignoreWhenGivingTheseItems": [],
+            "ignoreWhenReceivingTheseItems": []
+        },
+        "inbound": {
+            "checkOutboundTrades": true,
+            "checkInBoundTradesCooldown": 300,
+            "declineProjecteds": true,
+            "declineEqualTrade": true,
+            "ignoreWhenGivingTheseItems": [],
+            "ignoreWhenReceivingTheseItems": []
+        }
+    },
+    "specificTrading": {
+        "enabled": false,
+        "itemsToGive": [74939534],
+        "itemsToReceive": [1028606],
+        "robuxToGive": 0,
+        "robuxToReceive": 0
+    },
+    "debug": {
+        "dontSendTrade": false,
+        "printSuccessfulTrades": true
+    }
+}
