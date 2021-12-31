@@ -1,0 +1,139 @@
+
+[Whitelist]
+# Required for whitelist authentication.
+whitelist_user = 
+whitelist_pass = 
+
+
+
+[Authentication]
+# Required to send trade requests and get your Roblox ID.
+cookie = 
+
+
+
+[Trading Settings]
+###################### MIN/MAX VALUES ######################
+# Tells the bot to not trade items above this value
+maximum_item_value = 99999999
+
+# Tells the bot to not trade items below this value
+minimum_item_value = 200
+
+# Tells the bot to not send trades with total offer value above this number
+maximum_trade_value = 99999999
+
+# Tells the bot to not send trades with total offer value below this number
+minimum_trade_value = 200
+
+
+###################### ITEMS ######################
+# You can put the IDs of items that you don't want to send to other users, separated by commas.
+not_for_trade_offer = 0, 1
+# You can put the IDs of items that you don't want to ask from other users, separated by commas.
+not_for_trade_ask = 0, 1
+
+# Determines how Vector is going to calculate values for items. Will ONLY affect valued items.
+# custom = default algorithm developed by TimesAndPlaces. Takes Roli values as a base, and then modifies them based on multiple parameters.
+# avg_mix = simply takes values from both Roli and MRGA, assigning an average of those 2 values to an item.
+# combined_mix = for demand items, bot will be using Roli values, while for rares, it will be using MRGA values.
+value_algo = custom
+
+# Time in seconds since item was created. All items that were created earlier than this time won't be traded.
+minimum_item_age = 5184000
+
+# The bot will only ask for items with an average daily sale volume above this value.
+# Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
+minimum_ask_volume = 1
+
+# The bot will only offer items with a daily sale volume above this value.
+# Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
+minimum_offer_volume = 0.5
+
+# Tells bot how frequently to update each item. Setting it to less than an hour is not allowed.
+values_update_cooldown = 3600
+
+# Tells bot how frequently to scan MRGA and Rolimon's websites for value changes. Setting it to less than a minute is not recommended.
+values_scan_cooldown = 300
+
+# Tells bot what it should do with projected items (till their projected marker dissapears)
+# off = bot will trade all projecteds just like normal items, ask and offer
+# hoard = bot will not trade away projecteds, but will ask for them
+# tradeaway = bot will not ask for any projecteds, but will offer them away
+# block = bot will not ask nor offer projecteds
+projected_detection_mode = tradeaway
+
+# Tells bot what it should do with LPP'ed items (till their LPP'ed marker dissapears)
+# off = bot will trade all LPP'ed just like normal items, ask and offer
+# hoard = bot will not trade away LPP'ed, but will ask for them
+# tradeaway = bot will not ask for any LPP'ed, but will offer them away
+# block = bot will not ask nor offer LPP'ed
+lpp_detection_mode = off
+
+
+###################### INBOUND TRADES ######################
+# Specifies at what intervals bot should scan inbound trades, in seconds.
+inbound_scan_cooldown = 3600
+
+# Tells bot in what mode it should run inbound trades scan.
+# off = inbound scanner is turned off
+# light = bot will only accept trades wins fit into: max/min_item_value + NFT lists + min_item_age + min_daily_volume + proj/lpp_mode
+# strict = same as light mode settings + min/max_trade_attractiveness + min/max_value_gain + min/max_rap_gain
+inbound_scan_mode = strict
+
+
+###################### OUTBOUND TRADES ######################
+# Specifies at what intervals bot should scan outbound trades, in seconds.
+outbound_scan_cooldown = 3600
+
+# Tells bot in what mode it should run outbound trades scan.
+# off = outbound scanner is turned off
+# light = bot will only keep wins that fit into: max/min_item_value + NFT lists + min_item_age + min_daily_volume + proj/lpp_mode
+# strict = same as light mode settings + min/max_trade_attractiveness + min/max_value_gain + min/max_rap_gain
+outbound_scan_mode = strict
+
+# Tells bot whether you want it to send trades to your friends or not.
+# true = bot will send trades to your friends just like to everyone else.
+# false = bot will not send trades to your friends, but still might accept or deny inbounds from them.
+trade_friends = false
+
+# Minimum time required to wait between sending a trade. Default is 20 seconds or 180 trades an hour.
+# This setting is heavily dependent on amount of proxy-servers that you have in proxy.txt file. 100 should be enough in most cases.
+# If you have no proxy, DO NOT set cooldown under 600. If you have 100+ proxies, 20 seconds cooldown should be fine.
+# Setting it too low will cause Roblox to temporarily (about 18 hours) disable trades on your account.
+trade_cooldown = 20
+
+# Maximum time you are willing to wait for program to calculate potential trades per partner.
+# 99% of partners require less than 5 seconds to compute, and 99.9% of partners require less than 10 sec to compute.
+max_trade_search_timer = 10
+
+# Controls how many items bot is allowed to offer/request in each trade. You can't offer or request over 4 items.
+minimum_offer = 1
+maximum_offer = 4
+
+minimum_ask = 1
+maximum_ask = 4
+
+# This setting controls the cooldown between trading with the same user again in seconds.
+trade_partner_cooldown = 259200
+
+# Calculated as a function of a difference between rap you offer and rap you asking for.
+# Zero means that your offer rap will equal asking rap, and it goes anywhere from -1 to 1. 
+# You can think of it as how attractive trade will look like for the other person. Set to "none" to disable the limit.
+# The higher the number, the more likely trade will be accepted.
+minimum_trade_attractiveness = -0.01
+maximum_trade_attractiveness = 0.15
+
+# Shows the percentage of value you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
+minimum_value_gain = 0.02
+maximum_value_gain = none
+
+# Shows the percentage of rap you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
+minimum_rap_gain = none
+maximum_rap_gain = none
+
+# Determines which trades in the queue are sent first
+# 1 = highest trade attractiveness
+# 2 = highest value gain
+# 3 = highest rap gain
+trade_priority = 2
