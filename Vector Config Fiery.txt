@@ -30,7 +30,7 @@ minimum_item_age = 5184000
 
 # The bot will only ask for items with an average daily sale volume above this value.
 # Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
-minimum_ask_volume = 16
+minimum_ask_volume = 3
 
 # The bot will only offer items with a daily sale volume above this value.
 # Usually volume under 0.5 is for unpopular items, and under 0.1 for dead or rare items.
@@ -40,7 +40,7 @@ minimum_offer_volume = 0.5
 values_update_cooldown = 3600
 
 # Tells bot how frequently to scan MRGA and Rolimon's websites for value changes. Setting it to less than a minute is not recommended.
-values_scan_cooldown = 300
+values_scan_cooldown = 120
 
 # Tells bot what it should do with projected items (till their projected marker dissapears)
 # off = bot will trade all projecteds just like normal items, ask and offer
@@ -54,7 +54,7 @@ projected_detection_mode = tradeaway
 # hoard = bot will not trade away LPP'ed, but will ask for them
 # tradeaway = bot will not ask for any LPP'ed, but will offer them away
 # block = bot will not ask nor offer LPP'ed
-lpp_detection_mode = tradeaway
+lpp_detection_mode = off
 
 
 ###################### INBOUND TRADES ######################
@@ -70,7 +70,7 @@ inbound_scan_mode = off
 
 ###################### OUTBOUND TRADES ######################
 # Specifies at what intervals bot should scan outbound trades, in seconds.
-outbound_scan_cooldown = 1800
+outbound_scan_cooldown = 500
 
 # Tells bot in what mode it should run outbound trades scan.
 # off = outbound scanner is turned off
@@ -87,11 +87,11 @@ trade_friends = false
 # This setting is heavily dependent on amount of proxy-servers that you have in proxy.txt file. 100 should be enough in most cases.
 # If you have no proxy, do not set cooldown under 600. If you have 100+ proxies, 50 seconds cooldown should be fine.
 # Setting it too low will cause Roblox to temporarily (about 18 hours) disable trades on your account.
-trade_cooldown = 52
+trade_cooldown = 15
 
 # Maximum time you are willing to wait for program to calculate potential trades per partner.
 # 99% of partners require less than 5 seconds to compute, and 99.9% of partners require less than 10 sec to compute.
-max_trade_search_timer = 20
+max_trade_search_timer = 12
 
 # Controls how many items bot is allowed to offer/request in each trade. You can't offer or request over 4 items.
 minimum_offer = 1
@@ -107,16 +107,16 @@ trade_partner_cooldown = 86400
 # Zero means that your offer rap will equal asking rap, and it goes anywhere from -1 to 1. 
 # You can think of it as how attractive trade will look like for the other person. Set to "none" to disable the limit.
 # The higher the number, the more likely trade will be accepted.
-minimum_trade_attractiveness = -0.05
-maximum_trade_attractiveness = 0.15
+minimum_trade_attractiveness = none
+maximum_trade_attractiveness = none
 
 # Shows the percentage of value you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
-minimum_value_gain = 250
-maximum_value_gain = none
+minimum_value_gain = 200
+maximum_value_gain = 1000
 
 # Shows the percentage of rap you will be gaining from each trade (0.01 = 1%). Set to "none" to disable the limit.
-minimum_rap_gain = 250
-maximum_rap_gain = none
+minimum_rap_gain = 95
+maximum_rap_gain = 600
 
 # Determines which trades in the queue are sent first
 # 1 = highest trade attractiveness
