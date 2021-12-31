@@ -6,7 +6,7 @@ user_id = 475384412
 
 [trading]
 
-priority = none
+priority = rap
 
 maximum_item_value = 10000
 maximum_item_rap = 10000
