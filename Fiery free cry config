@@ -8,13 +8,13 @@ user_id = 475384412
 
 priority = rap
 
-maximum_item_value = 10000
-maximum_item_rap = 10000
+maximum_item_value = 15000
+maximum_item_rap = 15000
 
-maximum_rap_increase = 250
+maximum_rap_increase = 300
 maximum_value_increase = 400
 
-minimum_rap_increase = 95
+minimum_rap_increase = 100
 minimum_value_increase = 120
 
 trade_priority = 2
