@@ -34,8 +34,8 @@ rares_to_demand = true
 flip_projecteds = true
 bigs_to_lots_of_smalls = true
 single_items_to_multiple = true
-prioritize_upgrading = false
-prioritize_downgrading = true
+prioritize_upgrading = true
+prioritize_downgrading = false
 
 ; Items you really want!
 items_you_really_want = 1,1,1
@@ -55,7 +55,7 @@ items_to_receive = 0
 
 [inbound]
 
-check_inbound_trades = true
+check_inbound_trades = false
 decline_projecteds = true
 accept_inbound_trades = false
 decline_none_demand_trades = true
@@ -65,7 +65,7 @@ check_inbound_timeout = 3
 [outbound]
 
 check_outbounds = true
-check_outbound_trades_cooldown = 40
+check_outbound_trades_cooldown = 10
 decline_trades_with_projecteds = true
 decline_equal_trades = true
 
